@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, useParams } from "next/navigation";
@@ -135,7 +136,7 @@ export default function ProductDetail() {
           </Typography>
           <Typography
             component={Link}
-            to="/shop"
+            href="/shop"
             sx={{
               display: "inline-block",
               mt: 3,
@@ -164,7 +165,7 @@ export default function ProductDetail() {
         {/* Breadcrumb */}
         <Typography
           component={Link}
-          to="/shop"
+          href="/shop"
           sx={{
             display: "inline-flex",
             alignItems: "center",
@@ -435,7 +436,8 @@ export default function ProductDetail() {
               }}
             >
               {related.map((p) => (
-                <ProductCard key={p.id} product={p} />
+                // <ProductCard key={p.id} product={p} />
+                <Box>Product Card</Box>
               ))}
             </Box>
           </Box>

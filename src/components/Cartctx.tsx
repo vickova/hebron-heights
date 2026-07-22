@@ -110,29 +110,29 @@ const user = true;
   };
 
   const addToCart = async (productId: string): Promise<ApiResponse> => {
-    // const res: ApiResponse = await hhgApi.addToCart(productId);
-    // return handleCartResponse(res);
+    const res: ApiResponse = await addToCart(productId);
+    return handleCartResponse(res);
     console.log("cart added")
   };
 
   const removeFromCart = async (productId: string): Promise<ApiResponse> => {
-    // const res: ApiResponse = await hhgApi.removeFromCart(productId);
-    // if (res.ok) await refresh();
-    // return res;
+    const res: ApiResponse = await removeFromCart(productId);
+    if (res.ok) await refresh();
+    return res;
     console.log("cart removed")
   };
 
   const increment = async (productId: string): Promise<ApiResponse> => {
-    // const res: ApiResponse = await hhgApi.incrementCartItem(productId);
-    // if (res.ok) await refresh();
-    // return res;
+    const res: ApiResponse = await increment(productId);
+    if (res.ok) await refresh();
+    return res;
     console.log("Increment")
   };
 
   const decrement = async (productId: string): Promise<ApiResponse> => {
-    // const res: ApiResponse = await hhgApi.decrementCartItem(productId);
-    // if (res.ok) await refresh();
-    // return res;
+    const res: ApiResponse = await decrement(productId);
+    if (res.ok) await refresh();
+    return res;
     console.log("decrement")
   };
 

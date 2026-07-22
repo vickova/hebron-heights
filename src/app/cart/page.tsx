@@ -175,8 +175,8 @@ const loading = false;
           /* 4. Cart Items & Summary Grid */
           <Grid container spacing={4}>
             {/* Items List Column */}
-            <Grid item xs={12} lg={8}>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+            <Grid size={{ xs: 12, lg: 8 }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                 {items.map(
                   (item, idx) =>
                     item && (
@@ -315,8 +315,8 @@ const loading = false;
             </Grid>
 
             {/* Order Summary Column */}
-            <Grid item xs={12} lg={4}>
-              <Paper
+              <Grid size={{ xs: 12, lg: 8 }}>
+                <Paper
                 elevation={0}
                 sx={{
                   p: 3,
@@ -358,7 +358,7 @@ const loading = false;
                       Subtotal ({items.length} items)
                     </Typography>
                     <Typography variant="body2">
-                      ₦{(subtotal || 0).toLocaleString()}
+                      ₦{'30000'}
                     </Typography>
                   </Box>
 

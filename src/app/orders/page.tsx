@@ -187,7 +187,7 @@ const router = useRouter();
             </Typography>
             <Button
               component={Link}
-              to="/shop"
+              href="/shop"
               sx={{
                 display: "inline-block",
                 mt: 3,

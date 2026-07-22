@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 import {
   Alert,
@@ -24,9 +24,10 @@ import AuthLayout from "@/components/AuthLayout/AuthLayout";
 
 export default function ResetPasswordPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
 
-  const resetToken = searchParams.get("token");
+  // const resetToken = searchParams.get("token");
+  const resetToken = 'reset'
 
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
